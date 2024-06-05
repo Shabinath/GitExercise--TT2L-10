@@ -1,9 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://biyyejk3jgomd"]
+[gd_scene load_steps=7 format=3 uid="uid://dbufvnolf7jan"]
 
-[ext_resource type="Script" path="res://src/menu_controller.gd" id="1_7x6vp"]
-[ext_resource type="Texture2D" uid="uid://bpelgnqs7bshf" path="res://res/cooltext459687964009651.png" id="2_qddw0"]
-[ext_resource type="Script" path="res://Start_button.gd" id="3_myo4g"]
-[ext_resource type="Script" path="res://src/scroll_label.gd" id="3_v2ba3"]
+[ext_resource type="Script" path="res://src/menu_controller.gd" id="1_hp4ah"]
+[ext_resource type="Texture2D" uid="uid://bpelgnqs7bshf" path="res://res/cooltext459687964009651.png" id="2_gawau"]
+[ext_resource type="Script" path="res://Start_button.gd" id="3_p8ok8"]
+[ext_resource type="Script" path="res://src/scroll_label.gd" id="4_1p308"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hyk1b"]
 load_path = "res://.godot/imported/Space Background.png-336e8e0cf22ef6bfc0fc13c3df69c801.ctex"
@@ -21,7 +21,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
-script = ExtResource("1_7x6vp")
+script = ExtResource("1_hp4ah")
 
 [node name="Bg" type="Sprite2D" parent="game"]
 position = Vector2(960, 544)
@@ -29,7 +29,7 @@ texture = SubResource("CompressedTexture2D_hyk1b")
 
 [node name="Sprite2D" type="Sprite2D" parent="game/Bg"]
 position = Vector2(-387, -376)
-texture = ExtResource("2_qddw0")
+texture = ExtResource("2_gawau")
 
 [node name="MainContainer" type="VBoxContainer" parent="game"]
 unique_name_in_owner = true
@@ -50,7 +50,7 @@ grow_vertical = 2
 [node name="Start_button" type="Button" parent="game/MainContainer"]
 layout_mode = 2
 text = "START"
-script = ExtResource("3_myo4g")
+script = ExtResource("3_p8ok8")
 
 [node name="Option_button" type="Button" parent="game/MainContainer"]
 layout_mode = 2
@@ -253,7 +253,7 @@ offset_top = -5.0
 offset_right = 489.0
 offset_bottom = 21.0
 text = "70%"
-script = ExtResource("3_v2ba3")
+script = ExtResource("4_1p308")
 
 [node name="Music_Label" type="Label" parent="game/OptionContainer/TabContainer/Sound"]
 layout_mode = 0
@@ -279,7 +279,7 @@ offset_top = -5.0
 offset_right = 489.0
 offset_bottom = 21.0
 text = "67%"
-script = ExtResource("3_v2ba3")
+script = ExtResource("4_1p308")
 
 [node name="SFX_Label" type="Label" parent="game/OptionContainer/TabContainer/Sound"]
 layout_mode = 0
@@ -305,7 +305,7 @@ offset_top = -5.0
 offset_right = 489.0
 offset_bottom = 21.0
 text = "67%"
-script = ExtResource("3_v2ba3")
+script = ExtResource("4_1p308")
 
 [node name="Container" type="HBoxContainer" parent="game/OptionContainer"]
 layout_mode = 2
