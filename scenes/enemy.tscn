@@ -404,34 +404,35 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_n2lb4"]
-radius = 44.3975
+[sub_resource type="CircleShape2D" id="CircleShape2D_kc3w4"]
+radius = 75.3824
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ackip"]
-radius = 9.53679
+[sub_resource type="CircleShape2D" id="CircleShape2D_r0cp3"]
+radius = 16.1245
 
 [node name="enemy" type="CharacterBody2D"]
 script = ExtResource("1_g4wml")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(584, 298)
-scale = Vector2(1.68182, 1.5)
+position = Vector2(598, 285.112)
+scale = Vector2(2.31818, 2.06034)
 sprite_frames = SubResource("SpriteFrames_yypj6")
-animation = &"facing front"
-frame_progress = 0.512131
+animation = &"moving down"
+frame_progress = 0.0846067
+offset = Vector2(0, -6)
 
 [node name="detection area" type="Area2D" parent="AnimatedSprite2D"]
-position = Vector2(38.0541, 36.3333)
+position = Vector2(-0.594589, 17.3334)
 collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/detection area"]
-position = Vector2(-38.6487, -28.3333)
-shape = SubResource("CircleShape2D_n2lb4")
+position = Vector2(-0.268158, -15.4464)
+shape = SubResource("CircleShape2D_kc3w4")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="AnimatedSprite2D/detection area"]
-position = Vector2(-38.0541, -31.6666)
-shape = SubResource("CircleShape2D_ackip")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(597, 289)
+shape = SubResource("CircleShape2D_r0cp3")
 
 [connection signal="body_entered" from="AnimatedSprite2D/detection area" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="AnimatedSprite2D/detection area" to="." method="_on_detection_area_body_exited"]

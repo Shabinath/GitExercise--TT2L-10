@@ -1,0 +1,62 @@
+[gd_scene load_steps=9 format=3 uid="uid://3jchli067dmm"]
+
+[ext_resource type="Texture2D" uid="uid://mlp0pjt788fw" path="res://art/character/monster right.png" id="1_ksksa"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2xpqc"]
+atlas = ExtResource("1_ksksa")
+region = Rect2(39, 174, 39, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ceph8"]
+atlas = ExtResource("1_ksksa")
+region = Rect2(78, 174, 39, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1wv37"]
+atlas = ExtResource("1_ksksa")
+region = Rect2(117, 174, 39, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xdhmv"]
+atlas = ExtResource("1_ksksa")
+region = Rect2(156, 174, 39, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lfqat"]
+atlas = ExtResource("1_ksksa")
+region = Rect2(195, 174, 39, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l636e"]
+atlas = ExtResource("1_ksksa")
+region = Rect2(234, 174, 39, 58)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kkyhb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2xpqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ceph8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1wv37")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xdhmv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lfqat")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l636e")
+}],
+"loop": true,
+"name": &"walking ",
+"speed": 5.0
+}]
+
+[node name="enemy 2" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(519.175, 269.125)
+scale = Vector2(2.29873, 2.13362)
+sprite_frames = SubResource("SpriteFrames_kkyhb")
+animation = &"walking "
+frame_progress = 0.930036

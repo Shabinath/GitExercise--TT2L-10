@@ -1,8 +1,7 @@
-[gd_scene load_steps=21 format=3 uid="uid://bw3s8ss7rhix8"]
+[gd_scene load_steps=20 format=3 uid="uid://bw3s8ss7rhix8"]
 
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_o1coq"]
 [ext_resource type="Texture2D" uid="uid://dq06wkxmaijr4" path="res://art/character/dfsectu-ba8ebeed-175b-4c0c-9f73-fab94ffff727.png" id="2_mkdey"]
-[ext_resource type="PackedScene" uid="uid://b08mxyhes6cx" path="res://scenes/enemy.tscn" id="3_2lhsu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x07ie"]
 atlas = ExtResource("2_mkdey")
@@ -141,17 +140,15 @@ animations = [{
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 collision_layer = 3
-collision_mask = 2
+collision_mask = 3
 script = ExtResource("1_o1coq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D"]
-position = Vector2(380, 234)
-scale = Vector2(1.11719, 1.05469)
+position = Vector2(356.813, 287.685)
+scale = Vector2(1.41208, 1.54108)
 sprite_frames = SubResource("SpriteFrames_n856v")
 animation = &"facing left"
+frame_progress = 0.0510643
 speed_scale = 2.0
-
-[node name="enemy" parent="." instance=ExtResource("3_2lhsu")]
-position = Vector2(56, 29)

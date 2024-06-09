@@ -64,4 +64,3 @@ func play_anim(movement) :
 			anim.play("moving right")
 		elif movement == 1:
 			anim.play("moving right")
-
