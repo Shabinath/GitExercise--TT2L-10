@@ -1,16 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://biyyejk3jgomd"]
+[gd_scene load_steps=8 format=3 uid="uid://biyyejk3jgomd"]
 
-[ext_resource type="Script" path="res://src/menu_controller.gd" id="1_7x6vp"]
-[ext_resource type="AudioStream" uid="uid://c1586ob7c6sfo" path="res://space-ambience-56265.mp3" id="2_8tahy"]
-[ext_resource type="Texture2D" uid="uid://60a6hh5el45t" path="res://res/Untitled design.png" id="2_qddw0"]
-[ext_resource type="Script" path="res://Start_button.gd" id="3_myo4g"]
-[ext_resource type="Script" path="res://src/scroll_label.gd" id="3_v2ba3"]
+[ext_resource type="Script" path="res://src/menu_controller.gd" id="1_hp4ah"]
+[ext_resource type="Texture2D" uid="uid://60a6hh5el45t" path="res://res/Untitled design.png" id="2_0tulo"]
+[ext_resource type="Texture2D" uid="uid://1t6k8isvhu8o" path="res://USE ARROW KEY TO MOVE AROUND (3).png" id="3_74gwj"]
+[ext_resource type="Script" path="res://Start_button.gd" id="3_p8ok8"]
+[ext_resource type="Script" path="res://src/scroll_label.gd" id="4_1p308"]
+[ext_resource type="AudioStream" uid="uid://c1586ob7c6sfo" path="res://space-ambience-56265.mp3" id="4_icl74"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hyk1b"]
 load_path = "res://.godot/imported/Space Background.png-336e8e0cf22ef6bfc0fc13c3df69c801.ctex"
-
-[sub_resource type="LabelSettings" id="LabelSettings_h0k2k"]
-font_size = 18
 
 [node name="main" type="Node"]
 
@@ -22,15 +20,22 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
-script = ExtResource("1_7x6vp")
+script = ExtResource("1_hp4ah")
 
 [node name="Bg" type="Sprite2D" parent="game"]
-position = Vector2(964, 544)
+position = Vector2(571, 325)
+scale = Vector2(0.596875, 0.598148)
 texture = SubResource("CompressedTexture2D_hyk1b")
 
 [node name="Sprite2D" type="Sprite2D" parent="game/Bg"]
-position = Vector2(-387, -376)
-texture = ExtResource("2_qddw0")
+position = Vector2(-10.0524, -280.867)
+scale = Vector2(1.95392, 1.95373)
+texture = ExtResource("2_0tulo")
+
+[node name="Sprite2D2" type="Sprite2D" parent="game/Bg"]
+position = Vector2(-803.534, 398.344)
+scale = Vector2(0.593822, 0.543468)
+texture = ExtResource("3_74gwj")
 
 [node name="MainContainer" type="VBoxContainer" parent="game"]
 unique_name_in_owner = true
@@ -41,21 +46,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -120.0
-offset_top = -50.0
-offset_right = 120.0
-offset_bottom = 100.0
+offset_left = -415.0
+offset_top = -86.0
+offset_right = 405.0
+offset_bottom = 194.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Start_button" type="Button" parent="game/MainContainer"]
 layout_mode = 2
-<<<<<<< HEAD
 text = "START GAME"
-=======
-text = "START"
-script = ExtResource("3_myo4g")
->>>>>>> ea8e36114601e2e3d153defd510678ee509d6192
+script = ExtResource("3_p8ok8")
 
 [node name="Option_button" type="Button" parent="game/MainContainer"]
 layout_mode = 2
@@ -89,150 +90,14 @@ custom_minimum_size = Vector2(0, 500)
 layout_mode = 2
 tab_alignment = 1
 
-[node name="Video" type="TabBar" parent="game/OptionContainer/TabContainer"]
-custom_minimum_size = Vector2(0, 20)
-layout_mode = 2
-
-[node name="General_Label" type="Label" parent="game/OptionContainer/TabContainer/Video"]
-layout_mode = 0
-offset_left = 26.0
-offset_top = 2.0
-offset_right = 95.0
-offset_bottom = 31.0
-text = "General"
-label_settings = SubResource("LabelSettings_h0k2k")
-
-[node name="Resolution_Label" type="Label" parent="game/OptionContainer/TabContainer/Video"]
-layout_mode = 0
-offset_left = 82.0
-offset_top = 42.0
-offset_right = 173.0
-offset_bottom = 68.0
-text = "Resolution :"
-
-[node name="Resolution_Optionbutton" type="OptionButton" parent="game/OptionContainer/TabContainer/Video"]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 26.0
-offset_top = 72.5
-offset_right = 210.0
-offset_bottom = 103.5
-item_count = 10
-popup/item_0/text = "640x480"
-popup/item_0/id = 0
-popup/item_1/text = "800x600"
-popup/item_1/id = 1
-popup/item_2/text = "1024x768"
-popup/item_2/id = 2
-popup/item_3/text = "1280x720"
-popup/item_3/id = 3
-popup/item_4/text = "1366x768"
-popup/item_4/id = 4
-popup/item_5/text = "1600x900"
-popup/item_5/id = 5
-popup/item_6/text = "1920x1080"
-popup/item_6/id = 6
-popup/item_7/text = "2560x1440"
-popup/item_7/id = 7
-popup/item_8/text = "3840x2160"
-popup/item_8/id = 8
-popup/item_9/text = "7680x4320"
-popup/item_9/id = 9
-
-[node name="WindowMode_Label" type="Label" parent="game/OptionContainer/TabContainer/Video"]
-layout_mode = 0
-offset_left = 314.0
-offset_top = 42.0
-offset_right = 434.0
-offset_bottom = 68.0
-text = "Window Mode :"
-
-[node name="WindowMode_Optionbutton" type="OptionButton" parent="game/OptionContainer/TabContainer/Video"]
-layout_mode = 0
-offset_left = 298.0
-offset_top = 73.0
-offset_right = 474.0
-offset_bottom = 105.0
-
-[node name="Vsync_Label" type="Label" parent="game/OptionContainer/TabContainer/Video"]
-layout_mode = 0
-offset_left = 100.0
-offset_top = 132.0
-offset_right = 145.0
-offset_bottom = 158.0
-text = "Vsync"
-
-[node name="Vsync_OptionButton" type="OptionButton" parent="game/OptionContainer/TabContainer/Video"]
-layout_mode = 0
-offset_left = 26.0
-offset_top = 169.0
-offset_right = 210.0
-offset_bottom = 201.0
-item_count = 4
-popup/item_0/text = "off"
-popup/item_0/id = 0
-popup/item_1/text = "Normal"
-popup/item_1/id = 1
-popup/item_2/text = "Adaptative"
-popup/item_2/id = 2
-popup/item_3/text = "MailBox"
-popup/item_3/id = 3
-
-[node name="Color_blind" type="Label" parent="game/OptionContainer/TabContainer/Video"]
-layout_mode = 0
-offset_left = 318.0
-offset_top = 131.0
-offset_right = 451.0
-offset_bottom = 157.0
-text = "Color blind mode"
-
-[node name="ColorBlind_OptionButton" type="OptionButton" parent="game/OptionContainer/TabContainer/Video"]
-layout_mode = 0
-offset_left = 298.0
-offset_top = 169.0
-offset_right = 474.0
-offset_bottom = 200.0
-item_count = 4
-selected = 0
-popup/item_0/text = "OFF"
-popup/item_0/id = 0
-popup/item_1/text = "Protanopia"
-popup/item_1/id = 1
-popup/item_2/text = "Deuteranopia"
-popup/item_2/id = 2
-popup/item_3/text = "Tritanopia"
-popup/item_3/id = 3
-
-[node name="Graphics_Label" type="Label" parent="game/OptionContainer/TabContainer/Video"]
-layout_mode = 0
-offset_left = 26.0
-offset_top = 256.0
-offset_right = 103.0
-offset_bottom = 285.0
-text = "Graphics"
-label_settings = SubResource("LabelSettings_h0k2k")
-
-[node name="Preset_HSlider" type="HSlider" parent="game/OptionContainer/TabContainer/Video"]
-layout_mode = 0
-offset_left = 26.0
-offset_top = 342.0
-offset_right = 378.0
-offset_bottom = 358.0
-max_value = 20.0
-step = 5.0
-value = 5.0
-
-[node name="Preset_Label" type="Label" parent="game/OptionContainer/TabContainer/Video/Preset_HSlider"]
-layout_mode = 0
-offset_top = -24.0
-offset_right = 352.0
-offset_bottom = -1.0
-text = " Low  	   medium          high 	    very high      ultra"
-
 [node name="Sound" type="TabBar" parent="game/OptionContainer/TabContainer"]
-visible = false
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="game/OptionContainer/TabContainer/Sound"]
+position = Vector2(26, 103.5)
+stream = ExtResource("4_icl74")
+autoplay = true
 
 [node name="General_Label" type="Label" parent="game/OptionContainer/TabContainer/Sound"]
 layout_mode = 0
@@ -251,11 +116,6 @@ offset_bottom = 94.0
 value = 70.0
 rounded = true
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="game/OptionContainer/TabContainer/Sound/General_HScrollBar"]
-position = Vector2(-336, -134.5)
-stream = ExtResource("2_8tahy")
-autoplay = true
-
 [node name="Scroll_Label" type="Label" parent="game/OptionContainer/TabContainer/Sound/General_HScrollBar"]
 layout_mode = 0
 offset_left = 456.0
@@ -263,7 +123,7 @@ offset_top = -5.0
 offset_right = 489.0
 offset_bottom = 21.0
 text = "70%"
-script = ExtResource("3_v2ba3")
+script = ExtResource("4_1p308")
 
 [node name="Music_Label" type="Label" parent="game/OptionContainer/TabContainer/Sound"]
 layout_mode = 0
@@ -289,7 +149,7 @@ offset_top = -5.0
 offset_right = 489.0
 offset_bottom = 21.0
 text = "67%"
-script = ExtResource("3_v2ba3")
+script = ExtResource("4_1p308")
 
 [node name="SFX_Label" type="Label" parent="game/OptionContainer/TabContainer/Sound"]
 layout_mode = 0
@@ -315,7 +175,7 @@ offset_top = -5.0
 offset_right = 489.0
 offset_bottom = 21.0
 text = "67%"
-script = ExtResource("3_v2ba3")
+script = ExtResource("4_1p308")
 
 [node name="Container" type="HBoxContainer" parent="game/OptionContainer"]
 layout_mode = 2
@@ -337,10 +197,6 @@ text = "Return
 [connection signal="pressed" from="game/MainContainer/Start_button" to="game" method="_on_start_button_pressed"]
 [connection signal="pressed" from="game/MainContainer/Option_button" to="game" method="_on_option_button_pressed"]
 [connection signal="pressed" from="game/MainContainer/Exit_button" to="game" method="_on_exit_button_pressed"]
-[connection signal="item_selected" from="game/OptionContainer/TabContainer/Video/Resolution_Optionbutton" to="game" method="_on_resolution_optionbutton_item_selected"]
-[connection signal="item_selected" from="game/OptionContainer/TabContainer/Video/WindowMode_Optionbutton" to="game" method="_on_window_mode_optionbutton_item_selected"]
-[connection signal="item_selected" from="game/OptionContainer/TabContainer/Video/Vsync_OptionButton" to="game" method="_on_vsync_option_button_item_selected"]
-[connection signal="value_changed" from="game/OptionContainer/TabContainer/Video/Preset_HSlider" to="game" method="_on_preset_h_slider_value_changed"]
 [connection signal="value_changed" from="game/OptionContainer/TabContainer/Sound/General_HScrollBar" to="game" method="_on_general_h_scroll_bar_value_changed"]
 [connection signal="value_changed" from="game/OptionContainer/TabContainer/Sound/General_HScrollBar" to="game/OptionContainer/TabContainer/Sound/General_HScrollBar/Scroll_Label" method="_on_h_scroll_bar_value_changed"]
 [connection signal="value_changed" from="game/OptionContainer/TabContainer/Sound/Music_HScrollBar" to="game" method="_on_music_h_scroll_bar_value_changed"]
