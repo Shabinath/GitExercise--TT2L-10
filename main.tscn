@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://src/menu_controller.gd" id="1_7x6vp"]
 [ext_resource type="AudioStream" uid="uid://c1586ob7c6sfo" path="res://space-ambience-56265.mp3" id="2_8tahy"]
-[ext_resource type="Texture2D" uid="uid://bpelgnqs7bshf" path="res://res/cooltext459687964009651.png" id="2_qddw0"]
+[ext_resource type="Texture2D" uid="uid://60a6hh5el45t" path="res://res/Untitled design.png" id="2_qddw0"]
 [ext_resource type="Script" path="res://Start_button.gd" id="3_myo4g"]
 [ext_resource type="Script" path="res://src/scroll_label.gd" id="3_v2ba3"]
 
