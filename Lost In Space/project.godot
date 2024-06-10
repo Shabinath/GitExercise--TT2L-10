@@ -10,12 +10,6 @@ config_version=5
 
 [application]
 
-<<<<<<< HEAD
-config/name="lost in space"
-run/main_scene="res://scenes/character_body_2d.tscn"
-config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
-=======
 config/name="LOST IN SPACE"
 run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
@@ -23,4 +17,3 @@ config/features=PackedStringArray("4.2", "Forward Plus")
 [display]
 
 window/size/resizable=false
->>>>>>> ee0ae9d1a643e3bd1d6474e879e710172ac85554
