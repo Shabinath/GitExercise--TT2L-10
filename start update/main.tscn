@@ -1,9 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://dbufvnolf7jan"]
+[gd_scene load_steps=10 format=3 uid="uid://dbufvnolf7jan"]
 
 [ext_resource type="Script" path="res://src/menu_controller.gd" id="1_hp4ah"]
 [ext_resource type="Texture2D" uid="uid://bpelgnqs7bshf" path="res://res/cooltext459687964009651.png" id="2_gawau"]
 [ext_resource type="Script" path="res://Start_button.gd" id="3_p8ok8"]
 [ext_resource type="Script" path="res://src/scroll_label.gd" id="4_1p308"]
+[ext_resource type="PackedScene" uid="uid://db81jaujnyrfa" path="res://level_easy.tscn" id="5_6feo4"]
+[ext_resource type="PackedScene" uid="uid://dsee02ohsic1e" path="res://character.tscn" id="5_n5j6i"]
+[ext_resource type="PackedScene" path="res://level_2.tscn" id="6_m8ls0"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hyk1b"]
 load_path = "res://.godot/imported/Space Background.png-336e8e0cf22ef6bfc0fc13c3df69c801.ctex"
@@ -323,6 +326,12 @@ text = "Apply
 layout_mode = 2
 text = "Return
 "
+
+[node name="Level 1" parent="." instance=ExtResource("5_6feo4")]
+
+[node name="Level 2" parent="Level 1" instance=ExtResource("6_m8ls0")]
+
+[node name="character" parent="Level 1" instance=ExtResource("5_n5j6i")]
 
 [connection signal="pressed" from="game/MainContainer/Start_button" to="game" method="_on_start_button_pressed"]
 [connection signal="pressed" from="game/MainContainer/Option_button" to="game" method="_on_option_button_pressed"]
