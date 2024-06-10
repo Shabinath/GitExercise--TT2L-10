@@ -1,6 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://biyyejk3jgomd"]
 
 [ext_resource type="Script" path="res://src/menu_controller.gd" id="1_7x6vp"]
+[ext_resource type="AudioStream" uid="uid://c1586ob7c6sfo" path="res://space-ambience-56265.mp3" id="2_8tahy"]
 [ext_resource type="Texture2D" uid="uid://bpelgnqs7bshf" path="res://res/cooltext459687964009651.png" id="2_qddw0"]
 [ext_resource type="Script" path="res://Start_button.gd" id="3_myo4g"]
 [ext_resource type="Script" path="res://src/scroll_label.gd" id="3_v2ba3"]
@@ -24,7 +25,7 @@ size_flags_horizontal = 4
 script = ExtResource("1_7x6vp")
 
 [node name="Bg" type="Sprite2D" parent="game"]
-position = Vector2(960, 544)
+position = Vector2(964, 544)
 texture = SubResource("CompressedTexture2D_hyk1b")
 
 [node name="Sprite2D" type="Sprite2D" parent="game/Bg"]
@@ -49,8 +50,12 @@ grow_vertical = 2
 
 [node name="Start_button" type="Button" parent="game/MainContainer"]
 layout_mode = 2
+<<<<<<< HEAD
+text = "START GAME"
+=======
 text = "START"
 script = ExtResource("3_myo4g")
+>>>>>>> ea8e36114601e2e3d153defd510678ee509d6192
 
 [node name="Option_button" type="Button" parent="game/MainContainer"]
 layout_mode = 2
@@ -245,6 +250,11 @@ offset_right = 458.0
 offset_bottom = 94.0
 value = 70.0
 rounded = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="game/OptionContainer/TabContainer/Sound/General_HScrollBar"]
+position = Vector2(-336, -134.5)
+stream = ExtResource("2_8tahy")
+autoplay = true
 
 [node name="Scroll_Label" type="Label" parent="game/OptionContainer/TabContainer/Sound/General_HScrollBar"]
 layout_mode = 0
