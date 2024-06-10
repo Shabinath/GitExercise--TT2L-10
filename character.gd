@@ -6,6 +6,7 @@ var current_dir = "none"
 func _physics_process(delta):
 	player_movement(delta)
 
+@warning_ignore("unused_parameter")
 func player_movement(delta):
 	velocity = Vector2.ZERO  
 
