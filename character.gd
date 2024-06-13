@@ -1,8 +1,7 @@
-extends CharacterBody2D
 
-const speed = 100
-var current_dir = "none"
 
+<<<<<<< HEAD
+=======
 func _physics_process(delta):
 	player_movement(delta)
 
@@ -65,3 +64,4 @@ func play_anim(movement) :
 			anim.play("moving left")
 		elif movement == 1:
 			anim.play("moving left")
+>>>>>>> 1251d648cb5d5ee5dddf5c997f4e27d9fb3d60e5

@@ -1,8 +1,16 @@
+<<<<<<< HEAD
+[gd_scene load_steps=8 format=3 uid="uid://dbufvnolf7jan"]
+
+[ext_resource type="Script" path="res://src/menu_controller.gd" id="1_hp4ah"]
+[ext_resource type="Texture2D" uid="uid://60a6hh5el45t" path="res://res/Untitled design.png" id="2_0tulo"]
+[ext_resource type="Texture2D" uid="uid://dicws4i6ubhid" path="res://USE ARROW KEY TO MOVE AROUND (3).png" id="3_74gwj"]
+=======
 [gd_scene load_steps=8 format=3 uid="uid://biyyejk3jgomd"]
 
 [ext_resource type="Script" path="res://src/menu_controller.gd" id="1_hp4ah"]
 [ext_resource type="Texture2D" uid="uid://60a6hh5el45t" path="res://res/Untitled design.png" id="2_0tulo"]
 [ext_resource type="Texture2D" uid="uid://1t6k8isvhu8o" path="res://USE ARROW KEY TO MOVE AROUND (3).png" id="3_74gwj"]
+>>>>>>> 1251d648cb5d5ee5dddf5c997f4e27d9fb3d60e5
 [ext_resource type="Script" path="res://Start_button.gd" id="3_p8ok8"]
 [ext_resource type="Script" path="res://src/scroll_label.gd" id="4_1p308"]
 [ext_resource type="AudioStream" uid="uid://c1586ob7c6sfo" path="res://space-ambience-56265.mp3" id="4_icl74"]
