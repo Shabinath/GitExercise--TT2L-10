@@ -1,20 +1,17 @@
-<<<<<<< HEAD
-[gd_scene load_steps=8 format=3 uid="uid://dbufvnolf7jan"]
-[ext_resource type="Script" path="res://src/menu_controller.gd" id="1_hp4ah"]
-[ext_resource type="Texture2D" uid="uid://60a6hh5el45t" path="res://res/Untitled design.png" id="2_0tulo"]
-[ext_resource type="Texture2D" uid="uid://dicws4i6ubhid" path="res://USE ARROW KEY TO MOVE AROUND (3).png" id="3_74gwj"]
-=======
 [gd_scene load_steps=8 format=3 uid="uid://biyyejk3jgomd"]
+
 [ext_resource type="Script" path="res://src/menu_controller.gd" id="1_hp4ah"]
 [ext_resource type="Texture2D" uid="uid://60a6hh5el45t" path="res://res/Untitled design.png" id="2_0tulo"]
 [ext_resource type="Texture2D" uid="uid://1t6k8isvhu8o" path="res://USE ARROW KEY TO MOVE AROUND (3).png" id="3_74gwj"]
->>>>>>> 1251d648cb5d5ee5dddf5c997f4e27d9fb3d60e5
 [ext_resource type="Script" path="res://Start_button.gd" id="3_p8ok8"]
 [ext_resource type="Script" path="res://src/scroll_label.gd" id="4_1p308"]
 [ext_resource type="AudioStream" uid="uid://c1586ob7c6sfo" path="res://space-ambience-56265.mp3" id="4_icl74"]
+
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hyk1b"]
 load_path = "res://.godot/imported/Space Background.png-336e8e0cf22ef6bfc0fc13c3df69c801.ctex"
+
 [node name="main" type="Node"]
+
 [node name="game" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
@@ -24,18 +21,22 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 script = ExtResource("1_hp4ah")
+
 [node name="Bg" type="Sprite2D" parent="game"]
 position = Vector2(571, 325)
 scale = Vector2(0.596875, 0.598148)
 texture = SubResource("CompressedTexture2D_hyk1b")
+
 [node name="Sprite2D" type="Sprite2D" parent="game/Bg"]
 position = Vector2(-10.0524, -280.867)
 scale = Vector2(1.95392, 1.95373)
 texture = ExtResource("2_0tulo")
+
 [node name="Sprite2D2" type="Sprite2D" parent="game/Bg"]
 position = Vector2(-803.534, 398.344)
 scale = Vector2(0.593822, 0.543468)
 texture = ExtResource("3_74gwj")
+
 [node name="MainContainer" type="VBoxContainer" parent="game"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 0)
@@ -51,18 +52,22 @@ offset_right = 405.0
 offset_bottom = 194.0
 grow_horizontal = 2
 grow_vertical = 2
+
 [node name="Start_button" type="Button" parent="game/MainContainer"]
 layout_mode = 2
 text = "START GAME"
 script = ExtResource("3_p8ok8")
+
 [node name="Option_button" type="Button" parent="game/MainContainer"]
 layout_mode = 2
 text = "OPTION"
+
 [node name="Exit_button" type="Button" parent="game/MainContainer"]
 layout_mode = 2
 size_flags_vertical = 4
 text = "EXIT
 "
+
 [node name="OptionContainer" type="VBoxContainer" parent="game"]
 unique_name_in_owner = true
 visible = false
@@ -79,17 +84,21 @@ offset_right = 250.0
 offset_bottom = 250.0
 grow_horizontal = 2
 grow_vertical = 2
+
 [node name="TabContainer" type="TabContainer" parent="game/OptionContainer"]
 custom_minimum_size = Vector2(0, 500)
 layout_mode = 2
 tab_alignment = 1
+
 [node name="Sound" type="TabBar" parent="game/OptionContainer/TabContainer"]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
+
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="game/OptionContainer/TabContainer/Sound"]
 position = Vector2(26, 103.5)
 stream = ExtResource("4_icl74")
 autoplay = true
+
 [node name="General_Label" type="Label" parent="game/OptionContainer/TabContainer/Sound"]
 layout_mode = 0
 offset_left = 10.0
@@ -97,6 +106,7 @@ offset_top = 46.0
 offset_right = 48.0
 offset_bottom = 69.0
 text = "General volume :"
+
 [node name="General_HScrollBar" type="HScrollBar" parent="game/OptionContainer/TabContainer/Sound"]
 layout_mode = 0
 offset_left = 10.0
@@ -105,6 +115,7 @@ offset_right = 458.0
 offset_bottom = 94.0
 value = 70.0
 rounded = true
+
 [node name="Scroll_Label" type="Label" parent="game/OptionContainer/TabContainer/Sound/General_HScrollBar"]
 layout_mode = 0
 offset_left = 456.0
@@ -113,6 +124,7 @@ offset_right = 489.0
 offset_bottom = 21.0
 text = "70%"
 script = ExtResource("4_1p308")
+
 [node name="Music_Label" type="Label" parent="game/OptionContainer/TabContainer/Sound"]
 layout_mode = 0
 offset_left = 10.0
@@ -120,6 +132,7 @@ offset_top = 99.0
 offset_right = 142.0
 offset_bottom = 125.0
 text = "Music volume :"
+
 [node name="Music_HScrollBar" type="HScrollBar" parent="game/OptionContainer/TabContainer/Sound"]
 layout_mode = 0
 offset_left = 10.0
@@ -128,6 +141,7 @@ offset_right = 458.0
 offset_bottom = 140.0
 value = 67.0
 rounded = true
+
 [node name="Scroll_Label" type="Label" parent="game/OptionContainer/TabContainer/Sound/Music_HScrollBar"]
 layout_mode = 0
 offset_left = 456.0
@@ -136,6 +150,7 @@ offset_right = 489.0
 offset_bottom = 21.0
 text = "67%"
 script = ExtResource("4_1p308")
+
 [node name="SFX_Label" type="Label" parent="game/OptionContainer/TabContainer/Sound"]
 layout_mode = 0
 offset_left = 10.0
@@ -143,6 +158,7 @@ offset_top = 146.0
 offset_right = 142.0
 offset_bottom = 172.0
 text = "SFX volume :"
+
 [node name="SFX_HScrollBar" type="HScrollBar" parent="game/OptionContainer/TabContainer/Sound"]
 layout_mode = 0
 offset_left = 10.0
@@ -151,6 +167,7 @@ offset_right = 458.0
 offset_bottom = 187.0
 value = 67.0
 rounded = true
+
 [node name="Scroll_Label" type="Label" parent="game/OptionContainer/TabContainer/Sound/SFX_HScrollBar"]
 layout_mode = 0
 offset_left = 456.0
@@ -159,20 +176,24 @@ offset_right = 489.0
 offset_bottom = 21.0
 text = "67%"
 script = ExtResource("4_1p308")
+
 [node name="Container" type="HBoxContainer" parent="game/OptionContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 alignment = 1
+
 [node name="Apply_button" type="Button" parent="game/OptionContainer/Container"]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 text = "Apply
 "
+
 [node name="Return_button" type="Button" parent="game/OptionContainer/Container"]
 layout_mode = 2
 text = "Return
 "
+
 [connection signal="pressed" from="game/MainContainer/Start_button" to="game" method="_on_start_button_pressed"]
 [connection signal="pressed" from="game/MainContainer/Option_button" to="game" method="_on_option_button_pressed"]
 [connection signal="pressed" from="game/MainContainer/Exit_button" to="game" method="_on_exit_button_pressed"]
@@ -183,5 +204,4 @@ text = "Return
 [connection signal="value_changed" from="game/OptionContainer/TabContainer/Sound/SFX_HScrollBar" to="game" method="_on_sfx_h_scroll_bar_value_changed"]
 [connection signal="value_changed" from="game/OptionContainer/TabContainer/Sound/SFX_HScrollBar" to="game/OptionContainer/TabContainer/Sound/SFX_HScrollBar/Scroll_Label" method="_on_h_scroll_bar_value_changed"]
 [connection signal="pressed" from="game/OptionContainer/Container/Apply_button" to="game" method="_on_apply_button_pressed"]
-[connection signal="pressed" from="game/OptionContainer/Container/Return_button" to="game" method="_on_return_button_pressed"]
 [connection signal="pressed" from="game/OptionContainer/Container/Return_button" to="game" method="_on_return_button_pressed"]
