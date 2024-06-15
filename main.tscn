@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=8 format=3 uid="uid://e7rwempsy1j0"]
+=======
+[gd_scene load_steps=8 format=3 uid="uid://biyyejk3jgomd"]
+>>>>>>> da19ea1417fd3ee0c666de307ed784b2999b5fbd
 
 [ext_resource type="Script" path="res://src/menu_controller.gd" id="1_hp4ah"]
 [ext_resource type="Texture2D" uid="uid://60a6hh5el45t" path="res://res/Untitled design.png" id="2_0tulo"]

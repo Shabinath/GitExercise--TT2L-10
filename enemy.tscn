@@ -1,50 +1,38 @@
-[gd_scene load_steps=17 format=3 uid="uid://btv5c0gbs8r1n"]
+[gd_scene load_steps=16 format=3 uid="uid://btv5c0gbs8r1n"]
 
 [ext_resource type="Script" path="res://enemy.gd" id="1_bxp6s"]
-[ext_resource type="Texture2D" uid="uid://chiffpq73vqyk" path="res://character/SHEET.PNG" id="1_vum58"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tlbe5"]
-atlas = ExtResource("1_vum58")
 region = Rect2(0, 416, 208, 208)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yji8g"]
-atlas = ExtResource("1_vum58")
 region = Rect2(208, 416, 208, 208)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_amp8c"]
-atlas = ExtResource("1_vum58")
 region = Rect2(416, 416, 208, 208)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ruyp0"]
-atlas = ExtResource("1_vum58")
 region = Rect2(0, 624, 208, 208)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qe60y"]
-atlas = ExtResource("1_vum58")
 region = Rect2(208, 624, 208, 208)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qv7fr"]
-atlas = ExtResource("1_vum58")
 region = Rect2(416, 624, 208, 208)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o0125"]
-atlas = ExtResource("1_vum58")
 region = Rect2(0, 0, 208, 208)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xsjuu"]
-atlas = ExtResource("1_vum58")
 region = Rect2(208, 0, 208, 208)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_myo73"]
-atlas = ExtResource("1_vum58")
 region = Rect2(0, 208, 208, 208)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ihneu"]
-atlas = ExtResource("1_vum58")
 region = Rect2(208, 208, 208, 208)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v8ier"]
-atlas = ExtResource("1_vum58")
 region = Rect2(416, 208, 208, 208)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_f0mml"]
