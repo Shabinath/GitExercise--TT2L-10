@@ -1,8 +1,7 @@
-[gd_scene load_steps=23 format=3 uid="uid://bs0txbbxwc7bq"]
+[gd_scene load_steps=22 format=3 uid="uid://bs0txbbxwc7bq"]
 
 [ext_resource type="Script" path="res://art/script/player2.gd" id="1_kl3kq"]
 [ext_resource type="Texture2D" uid="uid://qjk8mlelxgvi" path="res://astronaut.png" id="2_0ceku"]
-[ext_resource type="PackedScene" uid="uid://btv5c0gbs8r1n" path="res://enemy.tscn" id="3_lsgjm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ua5yl"]
 atlas = ExtResource("2_0ceku")
@@ -139,14 +138,15 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_i2os3"]
-radius = 16.1245
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8gr6u"]
+radius = 7.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_a2f4c"]
-radius = 5.09902
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sxovx"]
+radius = 6.0
 
 [node name="player2" type="CharacterBody2D"]
 position = Vector2(1, 1)
+collision_layer = 3
 script = ExtResource("1_kl3kq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -157,11 +157,9 @@ animation = &"idle_right"
 frame_progress = 0.00604669
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(40, 31)
-shape = SubResource("CircleShape2D_i2os3")
+position = Vector2(41, 30)
+shape = SubResource("CapsuleShape2D_8gr6u")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(40, 32)
-shape = SubResource("CircleShape2D_a2f4c")
-
-[node name="enemy" parent="." instance=ExtResource("3_lsgjm")]
+position = Vector2(41, 30)
+shape = SubResource("CapsuleShape2D_sxovx")

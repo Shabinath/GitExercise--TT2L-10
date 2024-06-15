@@ -1,8 +1,12 @@
 extends CharacterBody2D
 
-const speed = 100
+var speed = 100
 var current_dir = "none"
 var can_move = true
+var start_position = Vector2()  
+
+func _ready():
+	start_position = global_position  
 
 func _physics_process(delta):
 	if can_move:
@@ -65,8 +69,7 @@ func play_anim(movement):
 			anim.play("walk_right")
 		elif movement == 0:
 			anim.play("idle_right")
-	
-	
+
 func block_collision():
 	can_move = false
 	
@@ -74,9 +77,19 @@ func block_exit():
 	can_move = true
 
 func _on_CharacterBody2D_body_entered(body):
-	if body.is_in_group("MazeBlock"):
+	if body.is_in_group("res://level_easy.tscn"):
 		block_collision()
+	elif body.is_in_group("res://enemy.tscn"): 
+		restart_game()
 
 func _on_CharacterBody2D_body_exited(body):
-	if body.is_in_group("MazeBlock"):
+	if body.is_in_group("res://level_easy.tscn"):
 		block_exit()
+
+func restart_game():
+	get_tree().reload_current_scene()
+	
+
+
+
+

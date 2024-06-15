@@ -1,50 +1,53 @@
-[gd_scene load_steps=17 format=3 uid="uid://btv5c0gbs8r1n"]
+[gd_scene load_steps=17 format=3 uid="uid://v5ctexwreedo"]
 
-[ext_resource type="Script" path="res://enemy.gd" id="1_bxp6s"]
-[ext_resource type="Texture2D" uid="uid://chiffpq73vqyk" path="res://character/SHEET.PNG" id="1_vum58"]
+[ext_resource type="Script" path="res://enemy.gd" id="1_2adux"]
+[ext_resource type="Texture2D" uid="uid://chiffpq73vqyk" path="res://character/SHEET.PNG" id="2_urle8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ea8s7"]
+radius = 43.7305
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tlbe5"]
-atlas = ExtResource("1_vum58")
+atlas = ExtResource("2_urle8")
 region = Rect2(0, 416, 208, 208)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yji8g"]
-atlas = ExtResource("1_vum58")
+atlas = ExtResource("2_urle8")
 region = Rect2(208, 416, 208, 208)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_amp8c"]
-atlas = ExtResource("1_vum58")
+atlas = ExtResource("2_urle8")
 region = Rect2(416, 416, 208, 208)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ruyp0"]
-atlas = ExtResource("1_vum58")
+atlas = ExtResource("2_urle8")
 region = Rect2(0, 624, 208, 208)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qe60y"]
-atlas = ExtResource("1_vum58")
+atlas = ExtResource("2_urle8")
 region = Rect2(208, 624, 208, 208)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qv7fr"]
-atlas = ExtResource("1_vum58")
+atlas = ExtResource("2_urle8")
 region = Rect2(416, 624, 208, 208)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o0125"]
-atlas = ExtResource("1_vum58")
+atlas = ExtResource("2_urle8")
 region = Rect2(0, 0, 208, 208)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xsjuu"]
-atlas = ExtResource("1_vum58")
+atlas = ExtResource("2_urle8")
 region = Rect2(208, 0, 208, 208)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_myo73"]
-atlas = ExtResource("1_vum58")
+atlas = ExtResource("2_urle8")
 region = Rect2(0, 208, 208, 208)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ihneu"]
-atlas = ExtResource("1_vum58")
+atlas = ExtResource("2_urle8")
 region = Rect2(208, 208, 208, 208)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v8ier"]
-atlas = ExtResource("1_vum58")
+atlas = ExtResource("2_urle8")
 region = Rect2(416, 208, 208, 208)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_f0mml"]
@@ -103,15 +106,18 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_7qrhn"]
-radius = 113.04
+[sub_resource type="CircleShape2D" id="CircleShape2D_5qv3g"]
+radius = 91.3824
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_m2jas"]
-radius = 26.3059
-
-[node name="enemy" type="CharacterBody2D"]
+[node name="enemy 5" type="CharacterBody2D"]
 position = Vector2(498, 362)
-script = ExtResource("1_bxp6s")
+scale = Vector2(0.359999, 0.399999)
+floor_max_angle = 0.340339
+script = ExtResource("1_2adux")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.7778, -2.49999)
+shape = SubResource("CircleShape2D_ea8s7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_f0mml")
@@ -119,37 +125,12 @@ animation = &"walk"
 frame_progress = 0.0954712
 offset = Vector2(0, -6)
 
-[node name="detection are" type="Area2D" parent="."]
-position = Vector2(-3, 6)
+[node name="detection area" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="detection are"]
-shape = SubResource("CircleShape2D_7qrhn")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detection area"]
+shape = SubResource("CircleShape2D_5qv3g")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, -13)
-shape = SubResource("CircleShape2D_m2jas")
-
-[node name="MainContainer" type="VBoxContainer" parent="."]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(200, 0)
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 830.0
-offset_top = -19.0
-offset_right = 1030.0
-offset_bottom = 12.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(1.08353, 1)
-
-[node name="Button" type="Button" parent="MainContainer"]
-layout_mode = 2
-text = "RESTART"
-
-[connection signal="body_entered" from="detection are" to="." method="_on_detection_are_body_entered"]
-[connection signal="body_exited" from="detection are" to="." method="_on_detection_are_body_exited"]
+[connection signal="body_entered" from="detection area" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="detection area" to="." method="_on_detection_area_body_exited"]

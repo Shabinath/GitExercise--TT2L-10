@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://drighbdpfja6o"]
+
+[ext_resource type="Texture2D" uid="uid://cfxg6cp2mokyh" path="res://Untitled design (2).png" id="1_la5u1"]
+[ext_resource type="Script" path="res://speed.gd" id="2_hbhr0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mbup5"]
+radius = 212.722
+height = 589.413
+
+[node name="speed" type="Sprite2D"]
+position = Vector2(2.6875, -3)
+scale = Vector2(0.35475, 0.3495)
+texture = ExtResource("1_la5u1")
+script = ExtResource("2_hbhr0")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1.93798, 5.72246)
+shape = SubResource("CapsuleShape2D_mbup5")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

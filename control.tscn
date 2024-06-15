@@ -1,0 +1,72 @@
+[gd_scene load_steps=5 format=3 uid="uid://dhvy10t4ta26"]
+
+[ext_resource type="Script" path="res://control.gd" id="1_ndva4"]
+[ext_resource type="Texture2D" uid="uid://b1f38mx6ae52k" path="res://res/Space Background.png" id="1_vnymn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xr51b"]
+font_size = 100
+font_color = Color(0.118562, 0, 0.813247, 1)
+
+[sub_resource type="FontFile" id="FontFile_ejfu5"]
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+cache/0/50/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ndva4")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 3.0
+offset_right = 1921.0
+offset_bottom = 1083.0
+texture = ExtResource("1_vnymn")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 95.0
+offset_right = 872.0
+offset_bottom = 239.0
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_xr51b")
+
+[node name="play again" type="Button" parent="."]
+layout_mode = 0
+offset_left = 418.0
+offset_top = 242.0
+offset_right = 754.0
+offset_bottom = 319.0
+theme_override_fonts/font = SubResource("FontFile_ejfu5")
+theme_override_font_sizes/font_size = 50
+text = "PLAY AGAIN?"
+
+[node name="quit" type="Button" parent="."]
+layout_mode = 1
+offset_left = 984.0
+offset_top = 590.0
+offset_right = 1135.0
+offset_bottom = 633.0
+theme_override_font_sizes/font_size = 25
+text = "QUIT GAME"
+
+[connection signal="pressed" from="play again" to="." method="_on_play_again_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
